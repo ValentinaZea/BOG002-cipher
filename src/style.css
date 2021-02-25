@@ -1,0 +1,44 @@
+.main
+{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#welcome{
+    background-image: url(img/img1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px;
+    height: 700px;
+    text-align: center;
+}
+
+#welcome_title
+{
+    font-family: Sail;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 74px;
+    text-align: center;
+    color: #000000;
+}
+
+#gamer_name 
+{
+    font-family: Sail;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 55px;
+    text-align: center;
+    color: #000000;
+}
+
+button 
+{
+    background: rgba(41, 10, 10, 0.81);
+    border: 4px solid rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
