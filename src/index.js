@@ -8,6 +8,7 @@ function saveName(){
 
 function saveOffset(){
     var offset = document.getElementById('offset');
+    //convierte a tipo entero el offset 
     var offsetInt = parseInt(offset.value);
     cambioPantallas('start');
     cipher.decode(offsetInt);
