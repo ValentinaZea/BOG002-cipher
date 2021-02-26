@@ -22,6 +22,7 @@ function decode(){
     var offsetInt = localStorage.getItem('offsetParsed');
 
     var decrypted_message = cipher.decode(offsetInt, encrypted_message);
+    console.log(decrypted_message);
     elemDecrypted.innerHTML = decrypted_message;
     elemEncrypted.style.display = 'none';
 }
@@ -31,8 +32,7 @@ function cambioPantallas(section){
     elem.style.display = 'block';
     var elemWelcome = document.getElementById('welcome');
     var elemKey = document.getElementById('key');
-    console.log("Entró a cambio pantallas");
-
+    
     if(section ==  "welcome"){
         elemWelcome.style.display = 'display';
         elemKey.style.display = 'none';

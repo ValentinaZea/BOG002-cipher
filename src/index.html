@@ -3,29 +3,36 @@
   <head>
     <meta charset="utf-8">
     <title>Cipher C8</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css"/>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Sail&display=swap');
+    </style>
   </head>
   <body>
     <main>
       <div class="main">
         <div class="welcome-div" id="welcome">
-          <h1 id="welcome_title">Bienvenido a la bùsqueda del tesoro</h1>
-          <h3 id="gamer_name">Ingresa tu nombre aventurero</h3>
+          <h1>Bienvenido a la búsqueda del tesoro</h1>
+          <h3>Ingresa tu nombre aventurero</h3>
           <input type="text" id="username" class="texto_entrada">
           <button id="btnBienvenida">Empezar</button>
         </div>
         <div class="welcome-div" id="key">
-          <h3 id="gamer_name">Para comenzar digite la clave secreta</h3>
+          <h3>Para comenzar digite la clave secreta</h3>
           <input id="offset" type="text" class="texto_entrada">
           <button id="btnClave">Listo</button>
         </div>
         <div class="main-div" id="start">
-          <h3 id="instruction1">El arqueólogo Khan ha dejado esta carta para encontrar la 
+          <h4>El arqueólogo Khan ha dejado esta carta para encontrar la 
                               ubicación del tesoro, descifra el mensaje
-          </h3>
-          <img src="img/Pergamino1.png" alt="Forest" style="width:100%">
-          <h3 id="encrypted-message" class="message">HWZEFSIT?JQ?RFW</h3>
-          <h3 id="decrypted-message" class="message"></h3>
+          </h4>
+          <img src="img/Pergamino (1).png" alt="Forest" id="pergamino" style="width:100%">
+          <div class="message-container">
+            <p id="encrypted-message" class="message">
+              HWZEFSIT?JQ?AFXYT?RFW?IJ?FLZFX?UWTKZSIFX1?GFOT?QFX?YNJWWFX?IJXLWYNHFX?IJQ?EFMFWF1?INWPLJYJ?FQ?STWYJ
+            </p>
+            <p id="decrypted-message" class="message"></p>
+          </div>
           <button id="btnDescifrar">Descifrar mensaje</button>
         </div>
       </div>
