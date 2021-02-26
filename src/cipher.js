@@ -1,7 +1,7 @@
 const cipher = {
   // Descifrar
       decode: function(offset){
-   
+        console.log(offset);
         var string = 'CRUZANDO';
         var newString = "";
     

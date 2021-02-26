@@ -7,10 +7,10 @@ function saveName(){
 }
 
 function saveOffset(){
-    var offset = document.getElementById('offset').value;
-    console.log(offset);
+    var offset = document.getElementById('offset');
+    var offsetInt = parseInt(offset.value);
     cambioPantallas('start');
-    cipher.decode(offset);
+    cipher.decode(offsetInt);
 }
 
 function cambioPantallas(section){
