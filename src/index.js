@@ -6,6 +6,13 @@ function saveName(){
     cambioPantallas('key');
 }
 
+function saveOffset(){
+    var offset = document.getElementById('offset').value;
+    console.log(offset);
+    cambioPantallas('start');
+    cipher.decode(offset);
+}
+
 function cambioPantallas(section){
     var elem = document.querySelector('#'+section);
     elem.style.display = 'block';
@@ -38,7 +45,7 @@ let btnBienvenida = document.getElementById("btnBienvenida");
 btnBienvenida.addEventListener('click', saveName);
 
 let btnClave = document.getElementById("btnClave");
-btnClave.addEventListener('click', () => cambioPantallas('start'));
+btnClave.addEventListener('click', saveOffset);
 
 
 
