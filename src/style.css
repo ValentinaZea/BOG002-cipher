@@ -1,17 +1,32 @@
 .main
 {
     display: flex;
-  justify-content: center;
-  align-items: center;
+    justify-content: center;
+    align-items: center;
 }
 
-#welcome{
+.welcome-div{
     background-image: url(img/img1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     width: 500px;
     height: 700px;
     text-align: center;
+    display: none;
+}
+
+.main-div{
+    background-image: url(img/img2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px;
+    height: 700px;
+    text-align: center;
+    display: none;
+}
+
+#welcome{
+    display: block;
 }
 
 #welcome_title
@@ -46,11 +61,12 @@
     color: #000000;
 }
 
+
+
 button 
 {
     background: rgba(41, 10, 10, 0.81);
     border: 4px solid rgba(0, 0, 0, 0.25);
     border-radius: 15px;
 }
- 
 
