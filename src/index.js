@@ -10,13 +10,20 @@ function saveOffset(){
     var offset = document.getElementById('offset');
     //convierte a tipo entero el offset 
     var offsetInt = parseInt(offset.value);
+    localStorage.setItem('offsetParsed', offsetInt);
     cambioPantallas('start');
     cipher.encode(offsetInt);
-
 }
 
 function decode(){
-    cipher.decode 
+    var encrypted_message = document.getElementById("encrypted-message").innerHTML;
+    var elemEncrypted = document.querySelector("#encrypted-message");
+    var elemDecrypted = document.querySelector("#decrypted-message");
+    var offsetInt = localStorage.getItem('offsetParsed');
+
+    var decrypted_message = cipher.decode(offsetInt, encrypted_message);
+    elemDecrypted.innerHTML = decrypted_message;
+    elemEncrypted.style.display = 'none';
 }
 
 function cambioPantallas(section){
@@ -54,12 +61,7 @@ let btnClave = document.getElementById("btnClave");
 btnClave.addEventListener('click', saveOffset);
 
 let btnDescifrar = document.getElementById("btnDescifrar");
-btnDescifrar.addEventListener('click', saveOffset);
-
-
-
-
-
+btnDescifrar.addEventListener('click', decode);
 
 
 console.log(cipher);

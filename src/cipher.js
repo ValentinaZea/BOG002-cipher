@@ -18,10 +18,11 @@ const cipher = {
         console.log(newString);
   },
   // Descifrar
-  decode: function(offset) {
-    var string = 'HWZEFSIT?JQ?RFW';
+  decode: function(offset, mensaje) {
+    // var string = 'HWZEFSIT?JQ?RFW';
+    var string = mensaje;
     var newString = "";
-
+    
     for (var i = 0; i < string.length; i++) {
       var ascii = string[i];
       // console.log(ascii.charCodeAt(0));
@@ -32,7 +33,8 @@ const cipher = {
       var new_letter = String.fromCharCode(nuevo_ascii);
       newString += new_letter;
     }
-    console.log(newString);
+    // sconsole.log(newString);
+    return newString;
   }
 };
 
