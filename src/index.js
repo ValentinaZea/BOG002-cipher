@@ -11,7 +11,12 @@ function saveOffset(){
     //convierte a tipo entero el offset 
     var offsetInt = parseInt(offset.value);
     cambioPantallas('start');
-    cipher.decode(offsetInt);
+    cipher.encode(offsetInt);
+
+}
+
+function decode(){
+    cipher.decode 
 }
 
 function cambioPantallas(section){
@@ -47,6 +52,10 @@ btnBienvenida.addEventListener('click', saveName);
 
 let btnClave = document.getElementById("btnClave");
 btnClave.addEventListener('click', saveOffset);
+
+let btnDescifrar = document.getElementById("btnDescifrar");
+btnDescifrar.addEventListener('click', saveOffset);
+
 
 
 
