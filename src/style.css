@@ -110,7 +110,11 @@ button
     padding: 5px 37px;
 }
 
-#btnDescifrar{
+.btn-decrypt{
     position: absolute;
     bottom: 20%;
+}
+
+#btnNext{
+    display: none;
 }
