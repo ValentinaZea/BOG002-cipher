@@ -2,7 +2,7 @@ const cipher = {
   // Cifrar
    encode: function(offset, mensaje){
      var string = mensaje;
-      console.log(string);
+      console.log("offset:", offset);
       // var string = 'CRUZANDO EL MAR';
       var newString = "";
     
@@ -16,7 +16,8 @@ const cipher = {
           var new_letter = String.fromCharCode(nuevo_ascii);
           newString += new_letter;
         }
-        console.log(newString);
+        console.log("texto encriptado:",newString);
+      return newString;  
   },
   // Descifrar
   decode: function(offset, mensaje) {
@@ -38,7 +39,7 @@ const cipher = {
       }
       newString += new_letter;
     }
-    console.log("cadena desencriptada: ", newString);
+    // console.log("cadena desencriptada: ", newString);
     return newString;
   }
 };
