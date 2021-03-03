@@ -5,7 +5,13 @@ const cipher = {
       console.log("offset:", offset);
       // var string = 'CRUZANDO EL MAR';
       var newString = "";
-    
+
+      if(offset == null || offset == "" || typeof string !== "string"|| string == ""){
+        console.log("offset no válido");
+        // alert("Debes ingresar la clave");
+        throw new TypeError();
+      }
+      
         for (var i = 0; i < string.length; i++) {
           var ascii = string[i];
           // console.log(ascii.charCodeAt(0));
@@ -17,13 +23,21 @@ const cipher = {
           newString += new_letter;
         }
         console.log("texto encriptado:",newString);
-      return newString;  
+      return newString; 
+          
   },
   // Descifrar
   decode: function(offset, mensaje) {
     var string = mensaje;
     var newString = "";
     console.log("mensaje recibido:", mensaje);
+
+    if(offset == null || offset == "" || typeof string !== "string"|| string == ""){
+      console.log("offset no válido");
+      // alert("Debes ingresar la clave");
+      throw new TypeError();
+    }
+    
     for (var i = 0; i < string.length; i++) {
 
       if (string[i] == "?")

@@ -7,9 +7,19 @@ function saveName(){
 }
 
 function saveOffset(){
-    var offset = document.getElementById('offset');
+    var offset = document.getElementById('offset').value;
+    // var text;
+    // if (isNaN(offset)) {
+    //     text = "Offset no válido";
+    // } else {
+    //     text = "Input OK";
+    // }
+
+    // var newContent = document.createTextNode(text);
+    // document.getElementById("validacion").appendChild(newContent);
     //convierte a tipo entero el offset 
-    var offsetInt = parseInt(offset.value);
+
+    var offsetInt = parseInt(offset);
     localStorage.setItem('offsetParsed', offsetInt);
     cambioPantallas('next');
 }

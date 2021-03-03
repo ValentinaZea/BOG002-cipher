@@ -19,14 +19,15 @@
         </div>
         <div class="welcome-div" id="key">
           <h3>Para comenzar digite la clave secreta</h3>
-          <input id="offset" type="text" class="texto_entrada">
+          <input id="offset" type="number" required class="texto_entrada">
+          <p id="validacion"></p>
           <button id="btnClave">Listo</button>
         </div>
         <div class="main-div" id="start">
           <h4>El arqueólogo Khan ha dejado esta carta para encontrar la 
                               ubicación del tesoro, descifra el mensaje
           </h4>
-          <img src="img/Pergamino (1).png" alt="Forest" id="pergamino" style="width:100%">
+          <img src="img/Pergamino (1).png" alt="Forest" class="pergamino" style="width:100%">
           <div class="message-container">
             <p id="encrypted-message" class="message">HWZEFSIT?JQ?AFXYT?RFW?IJ?FLZFX?UWTKZSIFX?GFOT?QFX?YNJWWFX?IJXJWYNHFX?IJQ?EFMFWF?INWNLJYJ?FQ?STWYJ</p>
             <p id="decrypted-message" class="message"></p>
@@ -38,9 +39,9 @@
           <h4>Describe los hallazgos encontrados y envíalos en un mensaje secreto
               al Doctor Khan
           </h4>
-          <img src="img/Pergamino (1).png" alt="Forest" id="pergamino" style="width:100%">
+          <img src="img/Pergamino (1).png" class="pergamino" style="width:100%">
           <div class="message-container">
-            <input id="message-to-encrypt" type="text" class="texto_entrada">
+            <input id="message-to-encrypt" type="text" class="texto_entrada" required>
             <p id="secret-message" class="message"></p>
           </div>
           <button id="btnCifrar" class="btn-decrypt">Encriptar mensaje</button>
@@ -50,7 +51,7 @@
           <h1>Misión Completada</h1>
           <h3>Aventurero</h3>
           <button id="btnPlayAgain" class="btn-decrypt">Jugar de Nuevo</button>
-          <button id="btnBienvenida">Salir</button>
+          <button id="btnSalir">Salir</button>
         </div>
       </div>
       
