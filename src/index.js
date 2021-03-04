@@ -2,8 +2,10 @@ import cipher from './cipher.js';
 
 function saveName(){
     var username = document.getElementById('username').value;
+    localStorage.setItem('username', username);
     console.log(username);
     cambioPantallas('start');
+
 }
 
 function saveOffset(){
@@ -26,6 +28,7 @@ function decode(){
     var decrypted_message = cipher.decode(offsetInt, encrypted_message);
     console.log(decrypted_message);
     elemDecrypted.innerHTML = decrypted_message;
+
     elemEncrypted.style.display = 'none';
     btnNext.style.display = 'inline';
     btnDescifrar.style.display = 'none';
@@ -55,7 +58,8 @@ function cambioPantallas(section){
     var elemStart = document.getElementById('start');
     var elemNext = document.getElementById('next');
     var elemEnd = document.getElementById('end');
-   
+    var elemAdventureName = document.getElementById('adventure-name');
+
     if(section ==  "welcome"){
         elemKey.style.display = 'none';
         elemEnd.style.display = 'none';
@@ -72,6 +76,7 @@ function cambioPantallas(section){
     }
     else if(section == "end"){
         elemNext.style.display = 'none';
+        elemAdventureName.innerHTML = username;
     }
     
 }
