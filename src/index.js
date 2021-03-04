@@ -5,7 +5,6 @@ function saveName(){
     localStorage.setItem('username', username);
     console.log(username);
     cambioPantallas('start');
-
 }
 
 function saveOffset(){
@@ -59,10 +58,10 @@ function cambioPantallas(section){
     var elemNext = document.getElementById('next');
     var elemEnd = document.getElementById('end');
     var elemAdventureName = document.getElementById('adventure-name');
+    var username = localStorage.getItem('username');
 
     if(section ==  "welcome"){
         elemKey.style.display = 'none';
-        elemEnd.style.display = 'none';
     }
     else if(section == "key"){
         elemStart.style.display = 'none';
@@ -76,9 +75,13 @@ function cambioPantallas(section){
     }
     else if(section == "end"){
         elemNext.style.display = 'none';
-        elemAdventureName.innerHTML = username;
+        elemAdventureName.innerHTML += " " +username;
     }
     
+}
+
+function exit(){
+    close();
 }
 
 let divMain = document.querySelector(".main");
@@ -103,7 +106,12 @@ let btnMission = document.querySelector("#btnMission");
 btnMission.addEventListener('click', () => cambioPantallas('end'));
 
 let btnPlayAgain = document.querySelector("#btnPlayAgain");
-btnPlayAgain.addEventListener('click', () => cambioPantallas('welcome'));
+btnPlayAgain.addEventListener('click', _ => { // el _ es para indicar la ausencia de parametros
+    location.reload();
+});
+
+let btnSalir = document.querySelector("#btnSalir");
+btnSalir.addEventListener('click', exit);
 
 
 console.log(cipher);
