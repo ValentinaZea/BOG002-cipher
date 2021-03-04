@@ -19,8 +19,8 @@ function saveOffset(){
     // document.getElementById("validacion").appendChild(newContent);
     //convierte a tipo entero el offset 
 
-    var offsetInt = parseInt(offset);
-    localStorage.setItem('offsetParsed', offsetInt);
+    
+    localStorage.setItem('offset', offset);
     cambioPantallas('next');
 }
 
@@ -42,12 +42,12 @@ function decode(){
 }
 
 function encode(){
-    var offsetInt = localStorage.getItem('offsetParsed');
+    var offset = localStorage.getItem('offset');
     var message = document.getElementById('message-to-encrypt').value;
     var elemSecretMessage = document.querySelector("#secret-message");
     var elemInput = document.querySelector("#message-to-encrypt");
     var elemEndMission = document.querySelector("#btnMission");
-   
+    var offsetInt = parseInt(offset);
     var encoded_message = cipher.encode(offsetInt, message);
     elemSecretMessage.innerHTML = encoded_message;
     elemInput.style.display = 'none';
