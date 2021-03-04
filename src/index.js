@@ -8,27 +8,20 @@ function saveName(){
 
 function saveOffset(){
     var offset = document.getElementById('offset').value;
-    // var text;
+   
     if (offset == "") {
         alert("Debes ingresar la clave");
-    } else {
-        // convierte a tipo entero el offset 
-        var offsetInt = parseInt(offset);
-        localStorage.setItem('offsetParsed', offsetInt);
+    } else { 
+        localStorage.setItem('offset', offset);
         cambioPantallas('next');
     }
-    // var newContent = document.createTextNode(text);
-    // document.getElementById("validacion").appendChild(newContent);
 }
 
 function decode(){
     var encrypted_message = document.getElementById("encrypted-message").textContent;
     var elemEncrypted = document.querySelector("#encrypted-message");
     var elemDecrypted = document.querySelector("#decrypted-message");
-    // var elemBtnDecrypt = document.querySelector("#btnDescifrar");
-    // var elemBtnNext = document.querySelector("#btnNext");
-
-    // var offsetInt = localStorage.getItem('offsetParsed');
+    
     var offsetInt = 5;
     var decrypted_message = cipher.decode(offsetInt, encrypted_message);
     console.log(decrypted_message);
@@ -39,13 +32,15 @@ function decode(){
 }
 
 function encode(){
-    var offsetInt = localStorage.getItem('offsetParsed');
+    var offset = localStorage.getItem('offset');
     var message = document.getElementById('message-to-encrypt').value;
     var elemSecretMessage = document.querySelector("#secret-message");
     var elemInput = document.querySelector("#message-to-encrypt");
     var elemEndMission = document.querySelector("#btnMission");
-   
+
+    var offsetInt = parseInt(offset); // convierte a tipo entero el offset
     var encoded_message = cipher.encode(offsetInt, message);
+
     elemSecretMessage.innerHTML = encoded_message;
     elemInput.style.display = 'none';
     elemEndMission.style.display = 'inline';
@@ -62,12 +57,10 @@ function cambioPantallas(section){
     var elemEnd = document.getElementById('end');
    
     if(section ==  "welcome"){
-        // elemWelcome.style.display = 'display';
         elemKey.style.display = 'none';
         elemEnd.style.display = 'none';
     }
     else if(section == "key"){
-        // elemKey.style.display = 'display';
         elemStart.style.display = 'none';
     }
     else if(section == "start"){
