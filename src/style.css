@@ -32,6 +32,13 @@
     left: 50%;
 }
 
+.input-container{
+    position: absolute;
+    top: 35%;
+    left: 27%;
+}
+
+
 #welcome{
     display: block;
 }
@@ -122,3 +129,4 @@ button
 #btnMission{
     display: none;
 }
+
