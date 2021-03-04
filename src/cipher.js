@@ -8,7 +8,6 @@ const cipher = {
 
       if(offset == null || offset == "" || typeof string !== "string"|| string == ""){
         console.log("offset no válido");
-        // alert("Debes ingresar la clave");
         throw new TypeError();
       }
       
