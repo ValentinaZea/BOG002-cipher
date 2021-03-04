@@ -38,6 +38,12 @@
     left: 27%;
 }
 
+.decrypted-message-container{
+    position: absolute;
+    top: 40%;
+    left: 29%;
+}
+
 
 #welcome{
     display: block;
@@ -130,3 +136,9 @@ button
     display: none;
 }
 
+#secret-message{
+    /* position: relative;
+    left: 40%; */
+    display: block;
+    margin: auto;
+}
